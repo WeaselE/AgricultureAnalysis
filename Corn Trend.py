@@ -11,11 +11,6 @@ with open("FeedGrains.csv", "r") as fl:
     df_corn = df_corn.sort_values(by="Year_ID")
     #Plotting corn information
     plt.plot(df_corn["Year_ID"], df_corn["Amount"], label="Corn")
-    #Find info for Sorghum
-    # df_sorghum = df.query("SC_Commodity_Desc == 'Sorghum' & SC_Attribute_Desc == 'Prices received by farmers' & SC_Frequency_Desc == 'Annual'")
-    # df_sorghum = df_sorghum.sort_values(by="Year_ID")
-    #Plotting Sorghum info
-    # plt.plot(df_sorghum["Year_ID"], df_sorghum["Amount"], label="Sorghum")
     #Find info for Barley feed
     df_barley = df.query("SC_Commodity_Desc == 'Barley feed' & SC_Attribute_Desc == 'Prices received by farmers' & SC_Frequency_Desc == 'Annual'")
     df_barley = df_barley.sort_values(by="Year_ID")
